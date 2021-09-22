@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './USsoft.jpg'
+import logo from './GauravImage.jpg'
 
 function PassportImage() {
     return (
