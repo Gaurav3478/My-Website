@@ -8,5 +8,4 @@ function PassportImage() {
         </div>
     )
 }
-
 export default PassportImage

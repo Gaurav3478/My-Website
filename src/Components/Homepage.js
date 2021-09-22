@@ -1,6 +1,6 @@
 import React from 'react'
 import PassportImage from './PassportImage'
-import Typer from '../Typer';
+import Typer from './Typer';
 
 function Homepage() {
     return (

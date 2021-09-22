@@ -2,16 +2,28 @@ import React from 'react'
 
 function Contact() {
     return (
-        <div>
-            <div className="container mb-3">
-                <label for="exampleFormControlInput1" className="form-label">Email address</label>
-                <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+        <div class="contact_left_bottom">
+              <div class="contact_left_text">
+                <p>
+                  Contact me via social media!
+                </p>
+              </div>
+
+              <div class="contact_social">
+                <div class="contact_social-icon">
+                  <a href="#"><i class="shadow uil uil-twitter-alt"></i></a>
                 </div>
-                <div className="mb-3">
-                <label for="exampleFormControlTextarea1" className="form-label">Example textarea</label>
-                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <div class="contact_social-icon">
+                  <a href="#"><i class="shadow uil uil-linkedin-alt"></i></a>
+                </div>
+                <div class="contact_social-icon">
+                  <a href="#"><i class="shadow uil uil-github-alt"></i></a>
+                </div>
+                <div class="contact_social-icon">
+                  <a href="#"><i class="shadow uil uil-envelope"></i></a>
+                </div>
+              </div>
             </div>
-        </div>
     )
 }
 
