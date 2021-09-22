@@ -1,11 +1,46 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 function Navbar(props) {
 
-    const boldify = ()=> {
-        <strong></strong>
+    const BoldAboutActive = ()=> {
+        if(AboutActive==='active') {
+            setAboutActive('');
+        }
+        else {
+            setAboutActive('active');
+            setHomeActive('');
+            setContactActive('');
+        }
     }
+
+    const BoldHomeActive = ()=> {
+        if(HomeActive ==='active') {
+            setHomeActive('');
+        }
+        else {
+            setHomeActive('active');
+            setContactActive('');
+            setAboutActive('');
+        }
+    }
+
+    const BoldContactActive = ()=> {
+        if(ContactActive==='active') {
+            setContactActive('');
+        }
+        else {
+            setContactActive('active');
+            setHomeActive('');
+            setAboutActive('');
+        }
+    }
+
+    const [AboutActive, setAboutActive] = useState('');
+    const [HomeActive, setHomeActive] = useState('active');
+    const [ContactActive, setContactActive] = useState('');
 
     return (
         <div>
@@ -18,13 +53,13 @@ function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/"><strong>Home</strong></Link>
-                    </li>
-                    <li className="nav-item" onClick={boldify}>
-                    <Link className="nav-link" to="/about">About</Link>
+                    <Link className={`nav-link ${HomeActive}`} aria-current="page" to="/" onClick={BoldHomeActive}>Home</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/form">Contact</Link>
+                    <Link className={`nav-link ${AboutActive}`} to="/about" onClick={BoldAboutActive}>About</Link>
+                    </li>
+                    <li className="nav-item">
+                    <Link className={`nav-link ${ContactActive}`} to="/form" onClick={BoldContactActive}>Contact</Link>
                     </li>
                     </ul>
                 <form className="d-flex">
